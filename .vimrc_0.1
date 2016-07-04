@@ -1,0 +1,56 @@
+" load the pathogen addon-thingy
+" load the packages that are in ~/src/vim/bundle/
+execute pathogen#infect('bundle/{}', '~/src/vim/bundle/{}') 
+set nocompatible
+" set line numbers
+set nu!
+" tab length: 4 spaces
+set tabstop=4
+" tab shift: 4 spaces
+set shiftwidth=4
+set softtabstop=4
+" replace tab with spaces
+set expandtab
+" show corresponding brackets
+set showmatch
+" highlight all search results
+set hlsearch
+filetype indent plugin on
+syntax on
+" use the pathogen.vim to add packages
+execute pathogen#infect()
+" spelling check:
+hi clear SpellBad
+set spell spelllang=en
+hi SpellBad cterm=underline,bold
+" make no tabs in python
+autocmd FileType python call ForPython()
+function ForPython()
+    set softtabstop=4
+    set expandtab
+	" press <F9> to execute the script
+    nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+    set textwidth=79
+    set autoindent
+    :syntax on
+endfunction
+"" to run python code
+"autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+" use pdflatex to compile .tex
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
+let g:LatexBox_latexmk_options = "-pvc pdfps"
+let g:LatexBox_latexmk_preview_continuously=1
+let g:LatexBox_latexmk_async=1
+" syntax highlighting for markdown
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" this is for the auto completion
+" add dictionaries under .vim/dictionaries/<filetyep>
+au FileType * exec("setlocal dictionary+=".$Home."/.vim/dictionaires/".expand('<amatch>'))
+set complete+=k
+" make the browsed directory the current directory
+let g:netrw_keepdir=0
+" custom commands
+" ###############
+" make a map to void using <Esc> key
+inoremap jj <Esc>
