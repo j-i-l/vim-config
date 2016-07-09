@@ -3,7 +3,8 @@ Just my vimrc
 
 ## Vim plugins
 
-[pathogen](1) is quite usefull to handle plugins.
+#### [pathogen](1)
+is quite usefull to handle plugins.
 
 To synchronize plugins between different computers and make sure to have a plugin installed on all devices once it is installed 
 on one, you can use a sync client like [syncthing](2). Make sure to synchronize the `bundle` folder in which you copy the plugin.
@@ -18,8 +19,16 @@ Add the following line to your `.vimrc` on each device:
 
     execute pathogen#infect('bundle/{}', '~/src/vim/bundle/{}')
 
+#### [vim-airline](3) 
+makes the statusline look nice.
+
+The installation is symple:
+
+    git clone https://github.com/vim-airline/vim-airline ~/src/vim/bundle/vim-airline 
+
 
 
 
 [1]: https://github.com/tpope/vim-pathogen
 [2]: https://syncthing.net/
+[3]: https://github.com/vim-airline/vim-airline
