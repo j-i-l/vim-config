@@ -40,11 +40,18 @@ The installation is symple:
 
     git clone https://github.com/vim-airline/vim-airline ~/src/vim/bundle/vim-airline 
 
-The you might want some themes. They come in a git repo as well, just run:
+Then you might want some themes. They come in a git repo as well, just run:
 
     git clone https://github.com/vim-airline/vim-airline-themes ~/src/vim/bundle/vim-airline-themes
 
-[Here](5) you can have a look at some themes.
+[Here](5) you'll find some themes.
+
+#### [NERD tree](6)
+convenient way to browse your file system.
+
+To install:
+
+    git clone https://github.com/scrooloose/nerdtree.git ~/src/vim/bundle/nerdtree
 
 [1]: https://github.com/tpope/vim-pathogen
 [2]: https://syncthing.net/
