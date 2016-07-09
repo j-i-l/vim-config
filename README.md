@@ -44,8 +44,10 @@ The you might want some themes. They come in a git repo as well, just run:
 
     git clone https://github.com/vim-airline/vim-airline-themes ~/src/vim/bundle/vim-airline-themes
 
+[Here](5) you can have a look at some themes.
 
 [1]: https://github.com/tpope/vim-pathogen
 [2]: https://syncthing.net/
 [3]: https://github.com/vim-airline/vim-airline
 [4]: https://github.com/tpope/vim-sensible
+[5]: https://github.com/vim-airline/vim-airline/wiki/Screenshots
