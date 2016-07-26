@@ -1,5 +1,5 @@
 # vim-config
-Just my vimrc and some plugins I find usefull.
+Just my vimrc and some plugins I find useful.
 
 ## Vim plugins
 
@@ -11,7 +11,8 @@ To install:
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-*Note* I use the path `~/src/vim/bundle` to store the packages, often `~/.vim/bundle` is used.
+*Note*
+I use the path `~/src/vim/bundle` to store the packages, often `~/.vim/bundle` is used.
 
 To synchronize plugins between different computers and make sure to have a plugin installed on all devices once it is installed 
 on one, you can use a sync client like [syncthing](2). Make sure to synchronize the `bundle` folder in which you copy the plugin.
@@ -40,7 +41,7 @@ The installation is symple:
 
     git clone https://github.com/vim-airline/vim-airline ~/src/vim/bundle/vim-airline 
 
-Then you might want some themes. They come in a git repo as well, just run:
+Then you might want some theme. They come in a git repo as well, just run:
 
     git clone https://github.com/vim-airline/vim-airline-themes ~/src/vim/bundle/vim-airline-themes
 
@@ -82,6 +83,14 @@ You can get it from github:
 
     git clone https://github.com/ervandew/supertab.git ~/src/vim/bundle/supertab
 
+### [vim-gitgutter](11)
+is a plugin that highlights changes in a git project (in case you use git).
+
+Same here:
+
+    git clone git clone https://github.com/airblade/vim-gitgutter.git ~/src/vim/bundle/git-gutter
+
+
 [1]: https://github.com/tpope/vim-pathogen
 [2]: https://syncthing.net/
 [3]: https://github.com/vim-airline/vim-airline
@@ -92,3 +101,4 @@ You can get it from github:
 [8]: http://vim-latex.sourceforge.net/
 [9]: https://sourceforge.net/projects/vim-latex/files/latest/download?source=files
 [10]: http://www.vim.org/scripts/script.php?script_id=1643
+[11]: https://github.com/airblade/vim-gitgutter
