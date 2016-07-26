@@ -1,5 +1,5 @@
 # vim-config
-Just my vimrc
+Just my vimrc and some plugins I find usefull.
 
 ## Vim plugins
 
