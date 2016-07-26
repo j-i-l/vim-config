@@ -20,6 +20,9 @@ set t_Co=256
 " options.
 set wildmode=longest,list,full
 set wildmenu
-
-set omnifunc
-omnifunc=jedi#completion
+" use pdflatex to compile .tex
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
+let g:LatexBox_latexmk_options = "-pvc pdfps"
+let g:LatexBox_latexmk_preview_continuously=1
+let g:LatexBox_latexmk_async=1
