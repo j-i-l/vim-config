@@ -53,8 +53,42 @@ To install:
 
     git clone https://github.com/scrooloose/nerdtree.git ~/src/vim/bundle/nerdtree
 
+### [jedi-vim](7)
+is a vim-pugin for autocompletion. It does a great job if you plan to use vim as a python IDE.
+
+Same here:
+
+    git clone --recursive https://github.com/davidhalter/jedi-vim ~/src/vim/bundle/jedi-vim
+
+
+### [vim-latex](8)
+is a powerfull plugin is you plan to use vim to write in latex.
+
+This one is on sourceforge, you can go [here](9) to get the last version.
+
+Extract it and copy the folder to `~/scr/bundle/`:
+
+    tar -zxvf vim-latex-xxxxx.tar.gz 
+    mv vim-latex-xxxxx ~/src/vim/bundle/vim-latex
+
+For the vim-jedi plugin to work correctly you will also need to install jedi, if you are on linux, this one is symple:
+
+    apt-get install python-jedi
+
+### [supertab](10)
+is what you have probably been looking for by now. It will allow you to use TAB instead of <C-Space> for the jedi plugin.
+
+You can get it from github:
+
+    git clone https://github.com/ervandew/supertab.git ~/src/vim/bundle/supertab
+
 [1]: https://github.com/tpope/vim-pathogen
 [2]: https://syncthing.net/
 [3]: https://github.com/vim-airline/vim-airline
 [4]: https://github.com/tpope/vim-sensible
 [5]: https://github.com/vim-airline/vim-airline/wiki/Screenshots
+[6]: https://github.com/scrooloose/nerdtree
+[7]: https://github.com/davidhalter/jedi-vim 
+[8]: http://vim-latex.sourceforge.net/
+[9]: https://sourceforge.net/projects/vim-latex/files/latest/download?source=files
+[10]: http://www.vim.org/scripts/script.php?script_id=1643
