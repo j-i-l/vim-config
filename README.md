@@ -77,7 +77,7 @@ For the vim-jedi plugin to work correctly you will also need to install jedi, if
     apt-get install python-jedi
 
 ### [supertab](10)
-is what you have probably been looking for by now. It will allow you to use TAB instead of <C-Space> for the jedi plugin.
+is what you have probably been looking for by now. It will allow you to use TAB instead of \<C-Space\> for the jedi plugin.
 
 You can get it from github:
 
