@@ -90,6 +90,13 @@ Same here:
 
     git clone git clone https://github.com/airblade/vim-gitgutter.git ~/src/vim/bundle/git-gutter
 
+### [vim-fugitive](12)
+is a plugin if you want to use git within vim.
+
+Installing it:
+
+    git clone https://github.com/tpope/vim-fugitive.git ~/src/vim/bundle/vim-fugitive
+    vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
 [1]: https://github.com/tpope/vim-pathogen
 [2]: https://syncthing.net/
@@ -102,3 +109,4 @@ Same here:
 [9]: https://sourceforge.net/projects/vim-latex/files/latest/download?source=files
 [10]: http://www.vim.org/scripts/script.php?script_id=1643
 [11]: https://github.com/airblade/vim-gitgutter
+[12]: https://github.com/tpope/vim-fugitive
