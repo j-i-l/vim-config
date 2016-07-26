@@ -1,6 +1,6 @@
 " .vimrc file by Jonas I. Liechti
 " =======================
-" Enjoy vim responsively!
+" Enjoy vim responsibly!
 " =======================
 
 " Load the plugins with pathogen
@@ -26,3 +26,8 @@ let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
 let g:LatexBox_latexmk_options = "-pvc pdfps"
 let g:LatexBox_latexmk_preview_continuously=1
 let g:LatexBox_latexmk_async=1
+" In case you like all search results to be highlighted uncomment the
+" following line:
+set hlsearch
+" If you like to see the line numbers:
+set nu!
