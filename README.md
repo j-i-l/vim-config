@@ -54,6 +54,15 @@ To install:
 
     git clone https://github.com/scrooloose/nerdtree.git ~/src/vim/bundle/nerdtree
 
+#### [nerdtree-execute](13)
+
+is a plug-in for [NERDTree](6) that provides an execute menu item, allowing to use the systems default application to open a node. This is particularly useful if you want to open e.g. pdf files.
+
+To install:
+
+    git clone https://github.com/ivalkeen/nerdtree-execute ~/src/vim/bundle/nerdtree-execute
+
+
 ### [jedi-vim](7)
 is a vim-pugin for autocompletion. It does a great job if you plan to use vim as a python IDE.
 
@@ -110,3 +119,4 @@ Installing it:
 [10]: http://www.vim.org/scripts/script.php?script_id=1643
 [11]: https://github.com/airblade/vim-gitgutter
 [12]: https://github.com/tpope/vim-fugitive
+[13]: https://github.com/ivalkeen/nerdtree-execute 
