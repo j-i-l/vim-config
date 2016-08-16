@@ -4,7 +4,7 @@ Just my vimrc and some plugins I find useful.
 ## Vim plugins
 
 #### [pathogen](1)
-is quite usefull to handle plugins.
+is quite useful to handle plugins.
 
 To install:
 
@@ -27,17 +27,17 @@ Add the following line to your `.vimrc` on each device:
 
     execute pathogen#infect('bundle/{}', '~/src/vim/bundle/{}')
 
-#### [senseible.vim](4)
-will set some more confortable 'default' values.
+#### [sensible.vim](4)
+will set some more comfortable 'default' values.
 To install it run:
 
     git clone git://github.com/tpope/vim-sensible.git ~/src/vim/bundle/vim-sensible
 
 
 #### [vim-airline](3) 
-makes the statusline look nice.
+makes the status line look nice.
 
-The installation is symple:
+The installation is simple:
 
     git clone https://github.com/vim-airline/vim-airline ~/src/vim/bundle/vim-airline 
 
@@ -72,7 +72,7 @@ Same here:
 
 
 ### [vim-latex](8)
-is a powerfull plugin is you plan to use vim to write in latex.
+is a powerful plugin is you plan to use vim to write in latex.
 
 This one is on sourceforge, you can go [here](9) to get the last version.
 
@@ -107,6 +107,22 @@ Installing it:
     git clone https://github.com/tpope/vim-fugitive.git ~/src/vim/bundle/vim-fugitive
     vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
+### [VIM: Hard Mode](14)
+
+no, this is not a game. This is a plugin that will help you on your journey to become a master of VIM. It does so by disabling character-wise navigation functionality (e.g. hjkl-keys). 
+
+Installation is same same:
+
+    git clone https://github.com/wikitopian/hardmode ~/src/vim/bundle/hardmode
+
+To turn it on:
+
+    :call HardMode()
+
+And if you want to chicken out type:
+
+    :call EasyMode()
+
 [1]: https://github.com/tpope/vim-pathogen
 [2]: https://syncthing.net/
 [3]: https://github.com/vim-airline/vim-airline
@@ -120,3 +136,4 @@ Installing it:
 [11]: https://github.com/airblade/vim-gitgutter
 [12]: https://github.com/tpope/vim-fugitive
 [13]: https://github.com/ivalkeen/nerdtree-execute 
+[14]: https://github.com/wikitopian/hardmode
