@@ -6,6 +6,9 @@
 " Reloading .vimrc
 autocmd! bufwritepost .vimrc source %
 
+" Eventhough I remapped the CapsLock and the Esc key this still useful
+inoremap jj <Esc>
+
 " Load the plugins with pathogen
 execute pathogen#infect('bundle/{}', '~/src/vim/bundle/{}')
 
