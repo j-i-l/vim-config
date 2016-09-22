@@ -107,6 +107,15 @@ Installing it:
     git clone https://github.com/tpope/vim-fugitive.git ~/src/vim/bundle/vim-fugitive
     vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
+###[ctrlp](15)
+is a nice search tool. To install:
+
+    git clone https://github.com/ctrlpvim/ctrlp.vim ~/src/vim/bundle/ctrlp
+
+and add the following line in your .vimrc
+
+    set runtimepath^=~/src/vim/bundle/ctrlp
+
 ### [VIM: Hard Mode](14)
 
 no, this is not a game. This is a plugin that will help you on your journey to become a master of VIM. It does so by disabling character-wise navigation functionality (e.g. hjkl-keys). 
@@ -137,3 +146,4 @@ And if you want to chicken out type:
 [12]: https://github.com/tpope/vim-fugitive
 [13]: https://github.com/ivalkeen/nerdtree-execute 
 [14]: https://github.com/wikitopian/hardmode
+[15]: https://github.com/ctrlpvim/ctrlp.vim
