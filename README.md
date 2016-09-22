@@ -92,6 +92,8 @@ You can get it from github:
 
     git clone https://github.com/ervandew/supertab.git ~/src/vim/bundle/supertab
 
+See the .vimrc file for further configurations of this plugin.
+
 ### [vim-gitgutter](11)
 is a plugin that highlights changes in a git project (in case you use git).
 

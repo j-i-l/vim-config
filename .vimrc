@@ -41,6 +41,8 @@ set smartcase
 
 " Use the supertab plugin in 'context' mode
 let g:SuperTabDefaultCompletionType = "context"
+" Close preview popup upon choosing
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 " No TABs but spaces
 set tabstop=4
