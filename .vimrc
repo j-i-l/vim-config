@@ -39,11 +39,16 @@ set incsearch
 set ignorecase
 set smartcase
 
+" No TABs but spaces:
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 " If you like to see the line numbers:
 set number
 " Text wrapping                                                                 
 set tw=79 " width of document                                                   
-set colorcolumn=80                                                              
 set colorcolumn=80                                                              
 highlight ColorColumn ctermbg=233                                               
 " I want *.py (and others) files to jump to the next line after a cw of 80.     
