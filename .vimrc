@@ -3,6 +3,9 @@
 " Enjoy vim responsibly!
 " =======================
 
+" Reloading .vimrc
+autocmd! bufwritepost .vimrc source %
+
 " Load the plugins with pathogen
 execute pathogen#infect('bundle/{}', '~/src/vim/bundle/{}')
 
@@ -20,6 +23,8 @@ set t_Co=256
 " options.
 set wildmode=longest,list,full
 set wildmenu
+" vim-latex
+" =========
 " use pdflatex to compile .tex
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
@@ -29,5 +34,35 @@ let g:LatexBox_latexmk_async=1
 " In case you like all search results to be highlighted uncomment the
 " following line:
 set hlsearch
+" Search should be case insensitive
+set incsearch
+set ignorecase
+set smartcase
+
 " If you like to see the line numbers:
-set nu!
+set number
+set tw=79 " width of document
+set nowrap " don't wrap
+set fo-=t " don't wrap when typing
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
+
+" Time to rebind <Leader> key to something useful (and common) the ',':
+let mapleader = ","
+
+" make it simpler to move around in windows:
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-h> <c-w>h
+map <c-l> <c-w>l
+
+" To navigate between tabs I use leader then h/l
+map <Leader>h <esc>:tabprevious<CR>
+map <Leader>l <esc>:tabnext<CR>
+
+" Keep more
+set history=700
+set undolevels=700
+
+" Load ctrlp
+set runtimepath^=~/src/vim/bundle/ctrlp
