@@ -41,11 +41,23 @@ set smartcase
 
 " If you like to see the line numbers:
 set number
-set tw=79 " width of document
-set nowrap " don't wrap
-set fo-=t " don't wrap when typing
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
+" Text wrapping                                                                 
+set tw=79 " width of document                                                   
+set colorcolumn=80                                                              
+set colorcolumn=80                                                              
+highlight ColorColumn ctermbg=233                                               
+" I want *.py (and others) files to jump to the next line after a cw of 80.     
+function! SetupEnv()                                                            
+    let l:path = expand('%:p')                                                  
+    if (&ft == 'python' || &ft == 'c')                                          
+        setlocal tw=79                                                          
+        setlocal nowrap                                                         
+        setlocal fo-=t " dont wrap when typing                                  
+    else                                                                        
+        setlocal wrap                                                           
+    endif                                                                       
+endfunction                                                                     
+autocmd! BufReadPost,BufNewFile * call SetupEnv()
 
 " Time to rebind <Leader> key to something useful (and common) the ',':
 let mapleader = ","
@@ -66,3 +78,29 @@ set undolevels=700
 
 " Load ctrlp
 set runtimepath^=~/src/vim/bundle/ctrlp
+let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+
+" Configs for the jedi-vim
+let g:jedi#usages_command = "<leader>z"                                         
+let g:jedi#popup_on_dot = 0                                                     
+let g:jedi#popup_select_first = 0                                               
+map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>                  
+                                                                                
+" Better navigating through omnicomplete option list                            
+" See                                                                           
+" http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
+set completeopt=longest,menuone                                                 
+function! OmniPopup(action)                                                     
+    if pumvisible()                                                             
+        if a:action == 'j'                                                      
+            return "\<C-N>"                                                     
+        elseif a:action == 'k'                                                  
+            return "\<C-P>"                                                     
+        endif                                                                   
+    endif                                                                       
+    return a:action                                                             
+endfunction                                                                     
+                                                                               
+inoremap <silent><C-j> <C-R>=OmniPopup('j')<cr>                                 
+inoremap <silent><C-k> <C-R>=OmniPopup('k')<cr>  
