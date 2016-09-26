@@ -97,6 +97,8 @@ set undolevels=700
 set runtimepath^=~/src/vim/bundle/ctrlp
 let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
+" use leader f to start the search
+let g:ctrlp_map = '<Leader>f'
 
 " Configs for the jedi-vim
 let g:jedi#usages_command = "<leader>z" 
