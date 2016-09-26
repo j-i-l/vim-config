@@ -54,6 +54,17 @@ To install:
 
     git clone https://github.com/scrooloose/nerdtree.git ~/src/vim/bundle/nerdtree
 
+#### [nerdtree-tabs](16)
+
+makes nerdtree more feel like a panel and less like a tab.
+
+To install:
+
+    git clone https://github.com/jistr/vim-nerdtree-tabs.git
+    ~/src/vim/bundle/nerdtree-tabs
+
+For command configs see the .vimrc
+
 #### [nerdtree-execute](13)
 
 is a plug-in for [NERDTree](6) that provides an execute menu item, allowing to use the systems default application to open a node. This is particularly useful if you want to open e.g. pdf files.
@@ -151,4 +162,5 @@ And if you want to chicken out type:
 [12]: https://github.com/tpope/vim-fugitive
 [13]: https://github.com/ivalkeen/nerdtree-execute 
 [14]: https://github.com/wikitopian/hardmode
-[15]: https://github.com/ctrlpvim/ctrlp.vim
+[15]: https://github.com/ctrlpvim/ctrlp
+[16]: https://github.com/jistr/vim-nerdtree-tabs
