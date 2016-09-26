@@ -60,8 +60,7 @@ makes nerdtree more feel like a panel and less like a tab.
 
 To install:
 
-    git clone https://github.com/jistr/vim-nerdtree-tabs.git
-    ~/src/vim/bundle/nerdtree-tabs
+    git clone https://github.com/jistr/vim-nerdtree-tabs.git ~/src/vim/bundle/nerdtree-tabs
 
 For command configs see the .vimrc
 
