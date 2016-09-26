@@ -61,20 +61,23 @@ set colorcolumn=80
 set wrap
 highlight ColorColumn ctermbg=233                                               
 " I want *.py (and others) files to jump to the next line after a cw of 80.     
-function! SetupEnv()                                                            
-    let l:path = expand('%:p')                                                  
-    if (&ft == 'python' || &ft == 'c')                                          
-        setlocal tw=79                                                          
-        setlocal nowrap                                                         
-        setlocal fo-=t " dont wrap when typing                                  
-    else                                                                        
-        setlocal wrap                                                           
-    endif                                                                       
-endfunction                                                                     
+function! SetupEnv() 
+    let l:path = expand('%:p') 
+    if (&ft == 'python' || &ft == 'c') 
+        setlocal tw=79 
+        setlocal nowrap  
+        setlocal fo-=t " dont wrap when typing 
+    else 
+        setlocal wrap 
+    endif 
+endfunction 
 autocmd! BufReadPost,BufNewFile * call SetupEnv()
 
 " Time to rebind <Leader> key to something useful (and common) the ',':
 let mapleader = ","
+
+" to run python code
+autocmd FileType python nnoremap <buffer> <Leader>x :exec '!python' shellescape(@%, 1)<cr>
 
 " make it simpler to move around in windows:
 map <c-j> <c-w>j
@@ -96,25 +99,33 @@ let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 
 " Configs for the jedi-vim
-let g:jedi#usages_command = "<leader>z"                                         
-let g:jedi#popup_on_dot = 0                                                     
-let g:jedi#popup_select_first = 0                                               
-map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>                  
-                                                                                
-" Better navigating through omnicomplete option list                            
-" See                                                                           
+let g:jedi#usages_command = "<leader>z" 
+let g:jedi#popup_on_dot = 0 
+let g:jedi#popup_select_first = 0 
+map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c> 
+" Better navigating through omnicomplete option list 
+" See 
 " http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
-set completeopt=longest,menuone                                                 
-function! OmniPopup(action)                                                     
-    if pumvisible()                                                             
-        if a:action == 'j'                                                      
-            return "\<C-N>"                                                     
-        elseif a:action == 'k'                                                  
-            return "\<C-P>"                                                     
-        endif                                                                   
-    endif                                                                       
-    return a:action                                                             
-endfunction                                                                     
-                                                                               
-inoremap <silent><C-j> <C-R>=OmniPopup('j')<cr>                                 
-inoremap <silent><C-k> <C-R>=OmniPopup('k')<cr>  
+set completeopt=longest,menuone 
+function! OmniPopup(action) 
+    if pumvisible() 
+        if a:action == 'j' 
+            return "\<C-N>" 
+        elseif a:action == 'k' 
+            return "\<C-P>" 
+        endif 
+    endif 
+    return a:action 
+endfunction 
+inoremap <silent><C-j> <C-R>=OmniPopup('j')<cr> 
+inoremap <silent><C-k> <C-R>=OmniPopup('k')<cr> 
+
+" nerdtree
+" ========
+" nerdtree-tabs
+" Open nerdtree-tab on starup of vim
+let g:nerdtree_tabs_open_on_console_startup = 1
+" Focus nerdtree on file/folder when opening
+let g:nerdtree_tabs_smart_startup_focus = 1
+" leader n toggles nerdtree
+map <Leader>n <esc>:NERDTreeMirrorToggle<CR>
