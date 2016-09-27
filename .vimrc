@@ -89,6 +89,10 @@ map <c-l> <c-w>l
 map <Leader>h <esc>:tabprevious<CR>
 map <Leader>l <esc>:tabnext<CR>
 
+" better indentation: use > and < in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
 " Keep more
 set history=700
 set undolevels=700
