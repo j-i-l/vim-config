@@ -94,17 +94,24 @@ set history=700
 set undolevels=700
 
 " Load ctrlp
+" ==========
 set runtimepath^=~/src/vim/bundle/ctrlp
 let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
-" use leader f to start the search
-let g:ctrlp_map = '<Leader>f'
+" use leader s to start the search
+let g:ctrlp_map = '<Leader>s'
 
-" Configs for the jedi-vim
+" jedi-vim
+" ========
+" Configs
 let g:jedi#usages_command = "<leader>z" 
 let g:jedi#popup_on_dot = 0 
 let g:jedi#popup_select_first = 0 
-map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c> 
+autocmd FileType python map <buffer> <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c> 
+" map K to <Leader>i if the file is a python file (to see docstring)
+autocmd FileType python map <buffer> <Leader>i K
+
+
 " Better navigating through omnicomplete option list 
 " See 
 " http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
