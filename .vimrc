@@ -99,8 +99,11 @@ map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
 
-" Make it easy to paste from clipboard
-map <Leader>p "*P
+" Make it easy to copy to and paste from the clipboard
+map <Leader>y "*y
+map <Leader>Y "*Y
+map <Leader>p "*p
+map <Leader>P "*P
 
 " To navigate between tabs I use leader then h/l
 map <Leader>h <esc>:tabprevious<CR>
