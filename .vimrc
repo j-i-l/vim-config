@@ -21,7 +21,7 @@ let g:airline_theme='luna'
 " adapt colors
 set t_Co=256
 
-" set the autocompletion to first complete as much as possible. A second tab
+" set the auto completion to first complete as much as possible. A second tab
 " will provide a list of options and a third tab will cycle through the
 " options.
 set wildmode=longest,list,full
@@ -42,7 +42,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Spellcheck is always usefull
+" Spell check is always useful
 hi clear SpellBad
 set spell spelllang=en
 hi SpellBad cterm=underline,bold
@@ -78,6 +78,15 @@ function! SetupEnv()
 endfunction 
 autocmd! BufReadPost,BufNewFile * call SetupEnv()
 
+" In case you want to add a single character and leave the insert mode right after
+" press s to insert single and S to append single. Note you can type 3s to
+" insert 3 time the char that follows.
+function! RepeatChar(char, count)
+  return repeat(a:char, a:count)
+endfunction
+nnoremap s :<C-U>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
+nnoremap S :<C-U>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
+
 " Time to rebind <Leader> key to something useful (and common) the ',':
 let mapleader = ","
 
@@ -89,6 +98,9 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
+
+" Make it easy to paste from clipboard
+map <Leader>p "*P
 
 " To navigate between tabs I use leader then h/l
 map <Leader>h <esc>:tabprevious<CR>
