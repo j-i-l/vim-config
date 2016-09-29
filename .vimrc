@@ -37,10 +37,15 @@ let g:LatexBox_latexmk_async=1
 " In case you like all search results to be highlighted uncomment the
 " following line:
 set hlsearch
-" Search should be case insensitive
+" Search should not be case sensitive
 set incsearch
 set ignorecase
 set smartcase
+
+" Spellcheck is always usefull
+hi clear SpellBad
+set spell spelllang=en
+hi SpellBad cterm=underline,bold
 
 " Use the supertab plugin in 'context' mode
 let g:SuperTabDefaultCompletionType = "context"
