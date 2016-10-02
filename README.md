@@ -118,6 +118,7 @@ Installing it:
 
     git clone https://github.com/tpope/vim-fugitive.git ~/src/vim/bundle/vim-fugitive
     vim -u NONE -c "helptags vim-fugitive/doc" -c q
+
 #### [vim-merginal](17)
 is a great addon to the fugitive plugin. It facilitates switching between
 branches, merging, cherry picking, etc.
@@ -126,6 +127,7 @@ Installing it:
 
     git clone https://github.com/idanarye/vim-merginal.vim ~/src/vim/bundle/vim-merginal
 
+The only command you need to remember to use Merginal is, tadaa, `:Merginal`.
 ####[ctrlp](15)
 is a nice search tool. To install:
 
