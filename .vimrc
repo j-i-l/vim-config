@@ -109,6 +109,12 @@ map <Leader>P "*P
 map <Leader>h <esc>:tabprevious<CR>
 map <Leader>l <esc>:tabnext<CR>
 
+" Easy way to resize windows
+nnoremap <silent> <Leader>wl :exe "vertical resize +2"<CR>
+nnoremap <silent> <Leader>wh :exe "vertical resize -2"<CR>
+nnoremap <silent> <Leader>wj :exe "resize +2"<CR>
+nnoremap <silent> <Leader>wk :exe "resize -2"<CR>
+
 " better indentation: use > and < in visual mode
 vnoremap < <gv
 vnoremap > >gv
