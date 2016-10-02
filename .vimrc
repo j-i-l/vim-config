@@ -106,14 +106,14 @@ map <Leader>p "*p
 map <Leader>P "*P
 
 " To navigate between tabs I use leader then h/l
-map <Leader>h <esc>:tabprevious<CR>
-map <Leader>l <esc>:tabnext<CR>
+map <Leader>th <esc>:tabprevious<CR>
+map <Leader>tl <esc>:tabnext<CR>
 
 " Easy way to resize windows
-nnoremap <silent> <Leader>wl :exe "vertical resize +2"<CR>
-nnoremap <silent> <Leader>wh :exe "vertical resize -2"<CR>
-nnoremap <silent> <Leader>wj :exe "resize +2"<CR>
-nnoremap <silent> <Leader>wk :exe "resize -2"<CR>
+nnoremap <silent> <Leader>wrl :exe "vertical resize +2"<CR>
+nnoremap <silent> <Leader>wrh :exe "vertical resize -2"<CR>
+nnoremap <silent> <Leader>wrj :exe "resize +2"<CR>
+nnoremap <silent> <Leader>wrk :exe "resize -2"<CR>
 
 " better indentation: use > and < in visual mode
 vnoremap < <gv
