@@ -73,7 +73,7 @@ To install:
     git clone https://github.com/ivalkeen/nerdtree-execute ~/src/vim/bundle/nerdtree-execute
 
 
-### [jedi-vim](7)
+#### [jedi-vim](7)
 is a vim-pugin for autocompletion. It does a great job if you plan to use vim as a python IDE.
 
 Same here:
@@ -84,7 +84,7 @@ For the vim-jedi plugin to work correctly you will also need to install jedi, if
 
     apt-get install python-jedi
 
-### [vim-latex](8)
+#### [vim-latex](8)
 is a powerful plugin is you plan to use vim to write in latex.
 
 This one is on sourceforge, you can go [here](9) to get the last version.
@@ -94,7 +94,7 @@ Extract it and copy the folder to `~/scr/bundle/`:
     tar -zxvf vim-latex-xxxxx.tar.gz 
     mv vim-latex-xxxxx ~/src/vim/bundle/vim-latex
 
-### [supertab](10)
+#### [supertab](10)
 is what you have probably been looking for by now. It will allow you to use TAB instead of \<C-Space\> for the jedi plugin.
 
 You can get it from github:
@@ -103,14 +103,14 @@ You can get it from github:
 
 See the .vimrc file for further configurations of this plugin.
 
-### [vim-gitgutter](11)
+#### [vim-gitgutter](11)
 is a plugin that highlights changes in a git project (in case you use git).
 
 Same here:
 
     git clone git clone https://github.com/airblade/vim-gitgutter.git ~/src/vim/bundle/git-gutter
 
-### [vim-fugitive](12)
+#### [vim-fugitive](12)
 is a plugin if you want to use git within vim.
 
 Installing it:
@@ -118,7 +118,16 @@ Installing it:
     git clone https://github.com/tpope/vim-fugitive.git ~/src/vim/bundle/vim-fugitive
     vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
-###[ctrlp](15)
+#### [vim-merginal](17)
+is a great addon to the fugitive plugin. It facilitates switching between
+branches, merging, cherry picking, etc.
+
+Installing it:
+
+    git clone https://github.com/idanarye/vim-merginal.vim ~/src/vim/bundle/vim-merginal
+
+The only command you need to remember to use Merginal is, tadaa, `:Merginal`.
+####[ctrlp](15)
 is a nice search tool. To install:
 
     git clone https://github.com/ctrlpvim/ctrlp.vim ~/src/vim/bundle/ctrlp
@@ -162,3 +171,4 @@ And if you want to chicken out type:
 [14]: https://github.com/wikitopian/hardmode
 [15]: https://github.com/ctrlpvim/ctrlp
 [16]: https://github.com/jistr/vim-nerdtree-tabs
+[17]: https://github.com/idanarye/vim-merginal
