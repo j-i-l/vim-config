@@ -80,6 +80,9 @@ Same here:
 
     git clone --recursive https://github.com/davidhalter/jedi-vim ~/src/vim/bundle/jedi-vim
 
+For the vim-jedi plugin to work correctly you will also need to install jedi, if you are on linux, this one is symple:
+
+    apt-get install python-jedi
 
 ### [vim-latex](8)
 is a powerful plugin is you plan to use vim to write in latex.
@@ -90,10 +93,6 @@ Extract it and copy the folder to `~/scr/bundle/`:
 
     tar -zxvf vim-latex-xxxxx.tar.gz 
     mv vim-latex-xxxxx ~/src/vim/bundle/vim-latex
-
-For the vim-jedi plugin to work correctly you will also need to install jedi, if you are on linux, this one is symple:
-
-    apt-get install python-jedi
 
 ### [supertab](10)
 is what you have probably been looking for by now. It will allow you to use TAB instead of \<C-Space\> for the jedi plugin.
