@@ -73,6 +73,21 @@ To install:
     git clone https://github.com/ivalkeen/nerdtree-execute ~/src/vim/bundle/nerdtree-execute
 
 
+#### [nerd-commenter](18)
+
+comes in handy if you are coding and want fancy commenting features.
+
+Installation:
+
+
+    comes in handy if you are coding and want fancy commenting features.
+
+    Installation:
+
+        git clone https://github.com/scrooloose/nerdcommenter.git ~/src/vim/bundle/nerd-commenter
+
+Some useful configs can be found in the .vimrc.
+    
 #### [jedi-vim](7)
 is a vim-pugin for autocompletion. It does a great job if you plan to use vim as a python IDE.
 
@@ -172,3 +187,4 @@ And if you want to chicken out type:
 [15]: https://github.com/ctrlpvim/ctrlp
 [16]: https://github.com/jistr/vim-nerdtree-tabs
 [17]: https://github.com/idanarye/vim-merginal
+[18]: https://github.com/scrooloose/nerdcommenter

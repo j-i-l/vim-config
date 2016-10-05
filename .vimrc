@@ -61,7 +61,7 @@ set expandtab
 " If you like to see the line numbers:
 set number
 " Text wrapping                                                                 
-set tw=79 " width of document                                                   
+set tw=0 " width of document                                                   
 set colorcolumn=80                                                              
 set wrap
 highlight ColorColumn ctermbg=233                                               
@@ -168,3 +168,12 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 let g:nerdtree_tabs_smart_startup_focus = 1
 " leader n toggles nerdtree
 map <Leader>n <esc>:NERDTreeMirrorToggle<CR>
+
+" nerd-commenter
+" ==============
+" Add a space after comment delimiters
+let g:NERDSpaceDelims = 1
+" Also comment empty lines in the bock
+let g:NERDCommentEmptyLines = 1
+" Trim trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
