@@ -80,10 +80,6 @@ comes in handy if you are coding and want fancy commenting features.
 Installation:
 
 
-    comes in handy if you are coding and want fancy commenting features.
-
-    Installation:
-
         git clone https://github.com/scrooloose/nerdcommenter.git ~/src/vim/bundle/nerd-commenter
 
 Some useful configs can be found in the .vimrc.
