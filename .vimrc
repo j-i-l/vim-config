@@ -9,6 +9,10 @@ autocmd! bufwritepost .vimrc source %
 " Enable the filetype plugin
 filetype plugin on
 
+" import dictionaries for auto completion
+au FileType * exec("setlocal dictionary+=".$HOME."/src/vim/dictionaries/".expand('<amatch>'))
+set complete+=k
+
 " Even though I remapped the CapsLock and the Esc key this still useful
 inoremap jj <Esc>
 
@@ -45,6 +49,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+" clear the highlighted text with double esc
+nnoremap <silent> <Esc><Esc> :noh<CR> :let @/=""<CR>
+
 " Spell check is always useful
 hi clear SpellBad
 set spell spelllang=en
@@ -63,12 +70,12 @@ set expandtab
 
 " If you like to see the line numbers:
 set number
-" Text wrapping                                                                 
-set tw=0 " width of document                                                   
-set colorcolumn=80                                                              
+" Text wrapping       
+set tw=0 " width of document 
+set colorcolumn=80 
 set wrap
-highlight ColorColumn ctermbg=233                                               
-" I want *.py (and others) files to jump to the next line after a cw of 80.     
+highlight ColorColumn ctermbg=233 ctermfg=black
+" I want *.py (and others) files to jump to the next line after a cw of 80
 function! SetupEnv() 
     let l:path = expand('%:p') 
     if (&ft == 'python' || &ft == 'c') 
