@@ -48,6 +48,8 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+" now set the color
+hi Search ctermfg=black
 
 " clear the highlighted text with double esc
 nnoremap <silent> <Esc><Esc> :noh<CR> :let @/=""<CR>
