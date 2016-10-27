@@ -86,7 +86,10 @@ set number
 set tw=0 " width of document 
 set colorcolumn=80 
 set wrap
-highlight ColorColumn ctermbg=233 ctermfg=black
+highlight ColorColumn ctermbg=233
+set formatoptions=l
+set lbr
+
 " I want *.py (and others) files to jump to the next line after a cw of 80
 function! SetupEnv() 
     let l:path = expand('%:p') 
