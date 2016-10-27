@@ -70,6 +70,16 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Somethings about code folding
+" This will make it possible to use code folding manually with <zf>
+augroup vimrc
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+augroup END
+" Save the view
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 " If you like to see the line numbers:
 set number
 " Text wrapping       
