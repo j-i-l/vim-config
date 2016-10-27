@@ -86,7 +86,7 @@ set number
 set tw=0 " width of document 
 set colorcolumn=80 
 set wrap
-highlight ColorColumn ctermbg=233
+highlight ColorColumn ctermbg=233 ctermfg=white
 set formatoptions=l
 set lbr
 
