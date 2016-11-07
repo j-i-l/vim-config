@@ -45,6 +45,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+" use esc to clear the search highlighting
+nnoremap <esc> :noh<return><esc>
+
 " Spell check is always useful
 hi clear SpellBad
 set spell spelllang=en
@@ -102,11 +105,21 @@ map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
 
+" shortcut to change the path
+map <Leader>cd :exe "cd %:p:h"<CR>
+map <Leader>lcd :exe "lcd %:p:h"<CR>
+
 " Make it easy to copy to and paste from the clipboard
-map <Leader>y "*y
-map <Leader>Y "*Y
-map <Leader>p "*p
-map <Leader>P "*P
+" vmap <Leader>y "*y
+" map <Leader>yy "*yy
+" vmap <Leader>Y "*Y
+" map <Leader>p "*p
+" map <Leader>P "*P
+vmap <Leader>y "+y
+map <Leader>yy "+yy
+vmap <Leader>Y "+Y
+map <Leader>p "+p
+map <Leader>P "+P
 
 " To navigate between tabs I use leader then h/l
 map <Leader>th <esc>:tabprevious<CR>
