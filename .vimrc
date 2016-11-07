@@ -9,6 +9,10 @@ autocmd! bufwritepost .vimrc source %
 " Enable the filetype plugin
 filetype plugin on
 
+" import dictionaries for auto completion
+au FileType * exec("setlocal dictionary+=".$HOME."/src/vim/dictionaries/".expand('<amatch>'))
+set complete+=k
+
 " Even though I remapped the CapsLock and the Esc key this still useful
 inoremap jj <Esc>
 
@@ -44,6 +48,11 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+" now set the color
+hi Search ctermfg=black
+
+" clear the highlighted text with double esc
+nnoremap <silent> <Esc><Esc> :noh<CR> :let @/=""<CR>
 
 " use esc to clear the search highlighting
 nnoremap <esc> :noh<return><esc>
@@ -64,14 +73,27 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Somethings about code folding
+" This will make it possible to use code folding manually with <zf>
+augroup vimrc
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+augroup END
+" Save the view
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 " If you like to see the line numbers:
 set number
-" Text wrapping                                                                 
-set tw=0 " width of document                                                   
-set colorcolumn=80                                                              
+" Text wrapping       
+set tw=0 " width of document 
+set colorcolumn=80 
 set wrap
-highlight ColorColumn ctermbg=233                                               
-" I want *.py (and others) files to jump to the next line after a cw of 80.     
+highlight ColorColumn ctermbg=233 ctermfg=white
+set formatoptions=l
+set lbr
+
+" I want *.py (and others) files to jump to the next line after a cw of 80
 function! SetupEnv() 
     let l:path = expand('%:p') 
     if (&ft == 'python' || &ft == 'c') 
