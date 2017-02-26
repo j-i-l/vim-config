@@ -63,7 +63,6 @@ To install:
     git clone https://github.com/jistr/vim-nerdtree-tabs.git ~/src/vim/bundle/nerdtree-tabs
 
 For command configs see the .vimrc
-
 #### [nerdtree-execute](13)
 
 is a plug-in for [NERDTree](6) that provides an execute menu item, allowing to use the systems default application to open a node. This is particularly useful if you want to open e.g. pdf files.
@@ -138,6 +137,7 @@ Installing it:
     git clone https://github.com/idanarye/vim-merginal.vim ~/src/vim/bundle/vim-merginal
 
 The only command you need to remember to use Merginal is, tadaa, `:Merginal`.
+
 ####[ctrlp](15)
 is a nice search tool. To install:
 
@@ -149,6 +149,16 @@ and add the following line in your .vimrc
 
 You might want to have a look at further options for this plugin in the .vimrc
 file.
+
+### [vim-syntastic](19)
+
+Is an extensive syntax checking plugin.
+
+Installation:
+
+    git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/src/bim/bundle/vim-syntastic
+
+Also, have a look at the specific settings in [.vimrc](.vimrc).
 
 ### [VIM: Hard Mode](14)
 
@@ -184,3 +194,4 @@ And if you want to chicken out type:
 [16]: https://github.com/jistr/vim-nerdtree-tabs
 [17]: https://github.com/idanarye/vim-merginal
 [18]: https://github.com/scrooloose/nerdcommenter
+[19]: https://github.com/vim-syntastic/syntastic
