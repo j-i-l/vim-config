@@ -150,7 +150,7 @@ and add the following line in your .vimrc
 You might want to have a look at further options for this plugin in the .vimrc
 file.
 
-### [vim-syntastic][19]
+#### [vim-syntastic][19]
 
 Is an extensive syntax checking plugin.
 
@@ -160,7 +160,7 @@ Installation:
 
 Also, have a look at the specific settings in [.vimrc](.vimrc).
 
-### [VIM: Hard Mode][14]
+#### [VIM: Hard Mode][14]
 
 no, this is not a game. This is a plugin that will help you on your journey to become a master of VIM. It does so by disabling character-wise navigation functionality (e.g. hjkl-keys). 
 
