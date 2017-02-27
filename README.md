@@ -156,7 +156,7 @@ Is an extensive syntax checking plugin.
 
 Installation:
 
-    git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/src/bim/bundle/vim-syntastic
+    git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/src/vim/bundle/vim-syntastic
 
 Also, have a look at the specific settings in [.vimrc](.vimrc).
 
