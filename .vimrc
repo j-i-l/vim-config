@@ -148,10 +148,10 @@ map <Leader>th <esc>:tabprevious<CR>
 map <Leader>tl <esc>:tabnext<CR>
 
 " Easy way to resize windows
-nnoremap <silent> <Leader>wrl :exe "vertical resize +2"<CR>
-nnoremap <silent> <Leader>wrh :exe "vertical resize -2"<CR>
-nnoremap <silent> <Leader>wrj :exe "resize +2"<CR>
-nnoremap <silent> <Leader>wrk :exe "resize -2"<CR>
+nnoremap <silent> <c-w>rl :exe "vertical resize +2"<CR>
+nnoremap <silent> <c-w>rh :exe "vertical resize -2"<CR>
+nnoremap <silent> <c-w>rj :exe "resize +2"<CR>
+nnoremap <silent> <c-w>rk :exe "resize -2"<CR>
 
 " better indentation: use > and < in visual mode
 vnoremap < <gv
@@ -223,3 +223,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" possibility to use several checkers
+let g:syntastic_aggregate_errors = 1
+" let g:syntastic_tex_checkers=['chktex', 'proselint']
+" custom command to use the proselint checker
+nnoremap <silent> <Leader>pc :exe "SyntasticCheck proselint"<CR>
