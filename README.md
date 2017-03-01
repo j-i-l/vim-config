@@ -179,6 +179,13 @@ Installation:
 
 Also, have a look at the specific settings in [.vimrc](.vimrc).
 
+Syntastic relies on external checkers that each need to be installed separately.
+Currently I'm using [flake8](http://flake8.pycqa.org/en/latest/) to check python
+files and [chktex](http://flake8.pycqa.org/en/latest/) for tex.
+Additionally, `<Leader>pc` is set to invoke [proselint](http://proselint.com/),
+an checker that highlights common mistakes and _things to avoid_ when writing
+prose.
+
 ### [VIM: Hard Mode][14]
 
 no, this is not a game. This is a plugin that will help you on your journey to
