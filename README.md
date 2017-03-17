@@ -186,6 +186,16 @@ Additionally, `<Leader>pc` is set to invoke [proselint](http://proselint.com/),
 an checker that highlights common mistakes and _things to avoid_ when writing
 prose.
 
+### [conque][20]
+
+plugin that allows to run a console (bash, python etc.) inside a vim buffer. Worth to give it a try...
+
+same same:
+
+    git clone https://github.com/wkentaro/conque.vim.git ~/src/vim/bundle/conque
+    
+`:help ConqueTerm` will tell you how to use it.
+
 ### [VIM: Hard Mode][14]
 
 no, this is not a game. This is a plugin that will help you on your journey to
@@ -223,3 +233,4 @@ And if you want to chicken out type:
 [17]: https://github.com/idanarye/vim-merginal
 [18]: https://github.com/scrooloose/nerdcommenter
 [19]: https://github.com/vim-syntastic/syntastic
+[20]: https://github.com/wkentaro/conque.vim
